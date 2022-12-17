@@ -1,0 +1,5 @@
+FROM ubuntu
+RUN echo 'httpserver镜像' && mkdir -p /dockerApp/httpserver
+COPY /src/httpServer/goHttpServer /dockerApp/httpServer/
+
+ENTRYPOINT ["/dockerApp/httpServer/goHttpServer"]
